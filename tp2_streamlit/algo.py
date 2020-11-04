@@ -1,12 +1,10 @@
-import numpy as np
 import pandas as pd
-import re
-from sklearn.pipeline import make_pipeline
+from joblib import dump
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.multiclass import OneVsRestClassifier
+from sklearn.pipeline import make_pipeline
 from sklearn.svm import SVC
 from stop_words import get_stop_words
-from joblib import dump
 
 df = pd.read_csv("labels.csv")
 df.dropna()
